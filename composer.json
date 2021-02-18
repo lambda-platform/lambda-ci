@@ -1,0 +1,40 @@
+{
+  "name": "lambda-platform/lambda-ci",
+  "description": "Lambda platform",
+  "type": "module",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "munkh-altai",
+      "email": "munkaltai@gmail.com"
+    },
+    {
+      "name": "n0m4dz",
+      "email": "tseegii.it@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "extra": {
+    "laravel": {
+      "providers": [
+
+      ],
+      "aliases": {
+        "Lambda": "Lambda", "Lambda\\Core\\": "../../ci/lambda/src"
+      }
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Lambda\\": "src"
+    }
+  },
+  "require": {
+    "php": "^7.3||^8.0",
+    "zizaco/entrust": "5.2.x-dev"
+  },
+  "require-dev": {
+    "codeigniter4/codeigniter4": "dev-develop",
+    "codeigniter4/codeigniter4-standard": "^1.0"
+  }
+}
