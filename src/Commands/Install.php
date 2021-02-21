@@ -24,6 +24,7 @@ class Install extends BaseCommand
 
 			//$this->copyResources();
 			$this->call("migrate", ["-all"]);
+
 			$this->moduleSeeder();
 
 			CLI::write("Module have been installed");
@@ -37,6 +38,8 @@ class Install extends BaseCommand
 		CLI::write("Run seeder module");
 		$seeder = Database::seeder();
 		$seeder->call("Agent\Database\Seeds\Agent");
+		$seeder->call("Puzzle\Database\Seeds\VbSchemasAdmin");
+		$seeder->call("Krud\Database\Seeds\KrudTemplate");
 	}
 
 	private function copyResources()

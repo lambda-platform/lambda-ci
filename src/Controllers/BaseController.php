@@ -98,6 +98,23 @@ class BaseController extends Controller
             ->setJSON($responseBody);
     }
 
+    public function res(array $responseBody)
+    {
+        return $this
+            ->response
+            ->setStatusCode(ResponseInterface::HTTP_OK)
+            ->setJSON($responseBody);
+    }
+
+
+    public function err(array $responseBody)
+    {
+        return $this
+            ->response
+            ->setStatusCode(ResponseInterface::HTTP_BAD_REQUEST)
+            ->setJSON($responseBody);
+    }
+
     public function getRequestInput(IncomingRequest $request){
         $input = $request->getPost();
         if (empty($input)) {
