@@ -22,6 +22,9 @@ if (! function_exists('lambda')) {
                     "Unable to : {$key}. "
                 );
             }
+            if($key == "static_words"){
+                return $lambda["static_words"][$lambda["default_language"]];
+            }
             return $lambda[$key];
         } else {
             return $lambda;

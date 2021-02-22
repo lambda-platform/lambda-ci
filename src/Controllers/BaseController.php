@@ -67,7 +67,7 @@ class BaseController extends Controller
     protected $helpers = [
         "mix",
         "lambda",
-        "staticwords",
+        "static_words",
         "jwt",
 
     ];

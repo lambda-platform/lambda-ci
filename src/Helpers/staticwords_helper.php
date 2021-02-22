@@ -2,7 +2,7 @@
 
 if (! function_exists('staticwords')) {
 
-    function staticwords($key = "")
+    function static_words($key = "")
     {
         static $lambda;
 

@@ -14,16 +14,6 @@
     }
   ],
   "minimum-stability": "stable",
-  "extra": {
-    "laravel": {
-      "providers": [
-
-      ],
-      "aliases": {
-        "Lambda": "Lambda", "Lambda\\Core\\": "../../ci/lambda/src"
-      }
-    }
-  },
   "autoload": {
     "psr-4": {
       "Lambda\\": "src"
