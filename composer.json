@@ -20,11 +20,8 @@
     }
   },
   "require": {
-    "php": "^7.3||^8.0",
-    "zizaco/entrust": "5.2.x-dev"
+    "php": "^7.3||^8.0"
   },
   "require-dev": {
-    "codeigniter4/codeigniter4": "dev-develop",
-    "codeigniter4/codeigniter4-standard": "^1.0"
   }
 }
