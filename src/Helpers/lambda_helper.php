@@ -8,10 +8,11 @@ if (! function_exists('lambda')) {
 
         $rootPath = $_SERVER['DOCUMENT_ROOT'];
 
-        $rootPath = str_replace('/public', '', $rootPath);
+        $rootPath = rtrim($rootPath, "public");
+
         if (! $lambda) {
-            if (! file_exists($manifestPath = ($rootPath . '/lambda.json') )) {
-                throw new Exception('The Lambda config oes not exist.'.$rootPath . '/lambda.json');
+            if (! file_exists($manifestPath = ($rootPath . 'lambda.json') )) {
+                throw new Exception('The Lambda config oes not exist.'.$rootPath . 'lambda.json');
             }
             $lambda = json_decode(file_get_contents($manifestPath), true);
         }
