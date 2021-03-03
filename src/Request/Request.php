@@ -23,6 +23,14 @@ class Request{
         }
         return $input;
     }
+
+    public function getFile($name)
+    {
+        $file = $this->request->getFile($name);
+
+        return $file;
+    }
+
 }
 
 

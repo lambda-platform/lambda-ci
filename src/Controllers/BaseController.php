@@ -98,12 +98,20 @@ class BaseController extends Controller
             ->setJSON($responseBody);
     }
 
-    public function res(array $responseBody)
+    public function res($responseBody)
     {
-        return $this
-            ->response
-            ->setStatusCode(ResponseInterface::HTTP_OK)
-            ->setJSON($responseBody);
+        if(is_array($responseBody)) {
+            return $this
+                ->response
+                ->setStatusCode(ResponseInterface::HTTP_OK)
+                ->setJSON($responseBody);
+        } else {
+            return $this
+                ->response
+                ->setStatusCode(ResponseInterface::HTTP_OK)
+                ->setBody($responseBody);
+        }
+
     }
 
 
