@@ -49,13 +49,14 @@ trait DBSchema
         $data = null;
         $data = [];
         try {
-            $query= $db->query("show fields from $table");
+            $query= $db->query("show fields from `$table`");
 
 
             $data = $query->getResultArray();
 
         } catch (\Exception $e) {
-            dd($e);
+            echo "show fields from `$table`";
+            var_dump($e);
         }
         if ($data) {
             $newData = [];
